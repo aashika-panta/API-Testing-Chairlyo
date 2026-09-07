@@ -1,0 +1,852 @@
+{
+  "info": {
+    "_postman_id": "35de763d-2329-4eb8-8dd5-fcb38eefb9d7",
+    "name": "Chairlyo API Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56957875"
+  },
+  "item": [
+    {
+      "name": "login super admin",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"email\":\"skilladmin@test.com\",\r\n\"password\":\"Skill@123\",\r\n\"rememberMe\":false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/accounts/login/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "accounts",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "retriving a admin",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_0s7y}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/accounts/me/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "accounts",
+            "me",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Branch",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_0q93}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"assxn sxas\",\r\n\"slug\":\"xdsvsnbdvcs\",\r\n\"status\":\"active\",\r\n\"email\":\"jshdcasxhdhc@gmail.com\",\r\n\"phone\":\"+9779870543455\",\r\n\"address\":\"sjdhbdbcvw\",\r\n\"timezone\":null,\r\n\r\n\"branch_admin\":{\r\n    \"first_name\":\"exdbasxsxbsdd\",\r\n    \"last_name\":\"mcbssxbnbdc\",\r\n    \"email\":\"aaaasxhjsaa@gmail.com\",\r\n    \"password\":\"123456789Aa@\",\r\n    \"phone\":\"+9779876987654\",\r\n    \"country\":\"np\"}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/branch/branches/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "branch",
+            "branches",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete a branch",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0ozm}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/branch/branches/beauty-salon-605/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "branch",
+            "branches",
+            "beauty-salon-605",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View a branch",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update a branch",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_04kt}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Morar - hghs\",\r\n\"slug\":\"beauty-salon-325\",\r\n\"status\":\"active\",\r\n\"email\":\"Zita_Hand-Howell82@yahoo.com\",\r\n\"phone\":\"+9779864878573\",\r\n\"address\":\"Kathmandu, Nepal\",\r\n\"timezone\":null,\r\n\"branch_admin\":{\r\n\r\n}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/branch/branches/beauty-salon-325/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "branch",
+            "branches",
+            "beauty-salon-325",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Branch detail",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_1b1l}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/branch/branches/my-overview/?branch_id=132",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "branch",
+            "branches",
+            "my-overview",
+            ""
+          ],
+          "query": [
+            {
+              "key": "branch_id",
+              "value": "132"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "overview this month",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/org-reports/overview-report/?period=custom&date_from=2026-08-17&date_to=2026-09-16",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "org-reports",
+            "overview-report",
+            ""
+          ],
+          "query": [
+            {
+              "key": "period",
+              "value": "custom"
+            },
+            {
+              "key": "date_from",
+              "value": "2026-08-17"
+            },
+            {
+              "key": "date_to",
+              "value": "2026-09-16"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Payment report this week",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/org-reports/payment-report/?limit=8&offset=0&period=this_week",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "org-reports",
+            "payment-report",
+            ""
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "8"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            },
+            {
+              "key": "period",
+              "value": "this_week"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout branch",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "invalid login admin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"email\":\"aashikapanta1@gmail.com\",\r\n\"password\":\"Aashika@\",\r\n\"rememberMe\":false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/accounts/login/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "accounts",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Branch login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"aashikapanta1@gmail.com\",\r\n\"password\":\"Aashika1@\",\r\n\"rememberMe\":false}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/accounts/login/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "accounts",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "already Waiting customer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "waiting added",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "session start",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "complete session",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "service add",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create customer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Staff added",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"hghgfghfg@gmail.com\",\r\n    \"password\":\"gfcgfgf\",\r\n    \"rememberMe\":false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/accounts/login/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "accounts",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete branch",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search branch",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_0zop}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/branch/branches/?search=beauty%20bliss&limit=8",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "branch",
+            "branches",
+            ""
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "beauty%20bliss"
+            },
+            {
+              "key": "limit",
+              "value": "8"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "this month filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "origin",
+            "value": "https://qa02.stage.chairlyo.com"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "referer",
+            "value": "https://qa02.stage.chairlyo.com/"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Brave\";v=\"152\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?1"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Android\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "same-site"
+          },
+          {
+            "key": "sec-gpc",
+            "value": "1"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Mobile Safari/537.36"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"aashikapanta1@gmail.com\",\"password\":\"gffdggf\",\"rememberMe\":false}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qa02.base.chairlyo.com/api/accounts/login/",
+          "protocol": "https",
+          "host": [
+            "qa02",
+            "base",
+            "chairlyo",
+            "com"
+          ],
+          "path": [
+            "api",
+            "accounts",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add staff",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit staff",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete staff",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "waiting count",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "session count",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "dashboard thismonth filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "customer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{json_web_token_1b1l}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseurl",
+      "value": ""
+    },
+    {
+      "key": "json_web_token_0s7y",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0q93",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0ozm",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_04kt",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_1b1l",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0tay",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0ci1",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0ci1",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0zop",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0nc5",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_168m",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0nc5",
+      "secret": true
+    }
+  ]
+}
